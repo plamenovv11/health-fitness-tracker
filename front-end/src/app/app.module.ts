@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { ApolloClient, InMemoryCache } from '@apollo/client/core';
 import { Apollo } from 'apollo-angular';
 import { HttpLink } from 'apollo-angular/http';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list'; // Correct module for lists
+import { MatIconModule } from '@angular/material/icon'; // For icon buttons (if you want to add a toggle button)
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +21,10 @@ import { HttpLink } from 'apollo-angular/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {

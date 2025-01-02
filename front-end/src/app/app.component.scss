@@ -1,0 +1,116 @@
+/* Main container for sidenav and content */
+.sidenav-container {
+    height: 100vh; /* Ensure full viewport height */
+    display: flex;
+    flex-direction: row;
+    overflow: hidden; /* Prevent unnecessary scrollbars */
+
+}
+
+/* Sidenav styles */
+.sidenav {
+    width: 140px;
+    background-color: #1976d2; /* Blue color */
+    border-radius: 10px 0 0 10px;
+    padding-top: 20px;
+    padding-left: 10px;
+    overflow: hidden; /* Prevent scrollbars inside the sidebar */
+}
+
+/* Remove default padding from the nav list */
+.mat-nav-list {
+    padding: 0;
+}
+
+/* Nav item styles */
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white; /* Text color changed to white */
+    font-size: 12px; /* Adjusted font size */
+}
+
+/* Sidebar label styles */
+.sidebar-label {
+    font-size: 12px; /* Adjusted font size */
+    margin-top: 1px; /* Adjust spacing */
+}
+
+/* Increased icon size */
+.nav-icon {
+    font-size: 40px; /* Larger icon size */
+    color: white; /* White icon */
+}
+
+/* Sidenav styles (for material sidenav) */
+.mat-sidenav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* Mat-list item styles */
+.mat-list-item {
+    font-size: 12px;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+/* Mat-icon styles */
+.mat-list-item mat-icon {
+    color: white; /* White icons */
+    margin-right: 10px;
+}
+
+/* Hover effect on nav items */
+.mat-list-item:hover {
+    background-color: #1976d2; /* Blue background on hover */
+    color: white;
+}
+
+.mat-list-item:hover mat-icon {
+    color: white; /* Keep icon white on hover */
+}
+
+/* Active link styles */
+.active-link {
+    font-weight: bold;
+    background-color: #1976d2; /* Active link background color */
+    color: white;
+}
+
+/* Main content styles */
+.main {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-left: 125px; /* Light background for main content */
+    overflow: hidden; 
+    height: 100%;/* Prevent scrollbars in the main content */
+}
+
+/* Override any inline margin-left applied by Material */
+.mat-sidenav-content {
+    margin-left: 0 !important; /* Remove any automatic margin applied */
+    overflow: hidden; 
+
+}
+
+/* Optional: Add responsive behavior for smaller screens */
+@media (max-width: 768px) {
+    .sidenav {
+        width: 200px;
+        overflow: hidden; 
+
+    }
+}
