@@ -1,0 +1,39 @@
+<div class="charts-container">
+        <div class="chart-box">
+                <canvas baseChart [datasets]="chartData" [labels]="chartLabels" [options]="chartOptions"
+                        chartType="line">
+                </canvas>
+        </div>
+
+        <div class="chart-box">
+                <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="chartOptions"
+                        chartType="bar">
+                </canvas>
+        </div>
+
+        <div class="chart-box">
+                <canvas baseChart [datasets]="pieData" [labels]="chartDataPie.labels" [options]="chartOptions"
+                        chartType="pie">
+                </canvas>
+        </div>
+
+        <div class="chart-box">
+                <canvas baseChart [datasets]="chartDataDoughnut.datasets" [labels]="chartDataDoughnut.labels"
+                        [options]="chartOptions" chartType="doughnut">
+                </canvas>
+        </div>
+
+        <!-- Radar Chart -->
+        <div class="chart-box">
+                <canvas baseChart [datasets]="chartDataRadar.datasets" [labels]="chartDataRadar.labels"
+                        [options]="chartOptions" chartType="radar">
+                </canvas>
+        </div>
+
+        <!-- Polar Chart -->
+        <div class="chart-box">
+                <canvas baseChart [datasets]="chartDataPolar.datasets" [labels]="chartDataPolar.labels"
+                        [options]="chartOptions" chartType="polarArea">
+                </canvas>
+        </div>
+</div>
