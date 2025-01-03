@@ -1,10 +1,9 @@
 <mat-sidenav-container class="sidenav-container">
     <!-- Sidebar -->
     <mat-sidenav #sidenav mode="side" opened class="sidenav">
-        <!-- Arrow icon at the top of the sidebar -->
-
-        <mat-nav-list>
-            <a mat-list-item routerLink="/dashboard" class="nav-item" routerLinkActive="active-link">
+        <mat-nav-list class="nav-list-override">
+            <a mat-list-item routerLink="/dashboard" class="nav-item" routerLinkActive="active-link"
+                (click)="updateHeader('Dashboard')">
                 <div class="nav-item">
                     <span class="sidebar-label">Dashboard</span>
                     <div class="sidebar-icon">
@@ -12,13 +11,43 @@
                     </div>
                 </div>
             </a>
+
+            <a mat-list-item routerLink="/workout" class="nav-item" routerLinkActive="active-link"
+                (click)="updateHeader('Workout')">
+                <div class="nav-item">
+                    <span class="sidebar-label">Workout</span>
+                    <div class="sidebar-icon">
+                        <mat-icon>fitness_center</mat-icon>
+                    </div>
+                </div>
+            </a>
+
+            <a mat-list-item routerLink="/nutrition" class="nav-item" routerLinkActive="active-link"
+                (click)="updateHeader('Nutrition')">
+                <div class="nav-item">
+                    <span class="sidebar-label">Nutrition</span>
+                    <div class="sidebar-icon">
+                        <mat-icon>local_dining</mat-icon>
+                    </div>
+                </div>
+            </a>
+
+
+            <a mat-list-item routerLink="/logout" class="nav-item logout" routerLinkActive="active-link"
+                (click)="updateHeader('Logout')">
+                <div class="nav-item">
+                    <span class="sidebar-label">Logout</span>
+                    <div class="sidebar-icon">
+                        <mat-icon>exit_to_app</mat-icon>
+                    </div>
+                </div>
+            </a>
         </mat-nav-list>
     </mat-sidenav>
 
 
-
-    <!-- Main content -->
     <mat-sidenav-content>
+        <app-header [headerTitle]="headerTitle"></app-header>
         <main class="main">
             <router-outlet></router-outlet>
         </main>

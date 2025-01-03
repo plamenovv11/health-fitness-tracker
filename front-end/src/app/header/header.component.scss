@@ -1,0 +1,36 @@
+.header {
+  background-color: #1976d2;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 180px;
+  max-width: -webkit-fill-available;
+}
+
+.header-title {
+  flex-grow: 1;
+  text-align: left;
+}
+
+.icon mat-icon {
+  color: #131c2b;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.mat-toolbar {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 10px 5px 5px 5px red;}
+
+.header-title {
+  color: rgba(1, 4, 9, 0.662);
+  font-family: 'Pacifico', cursive;
+
+  font-weight: bold;
+  font-size: 30px;
+}

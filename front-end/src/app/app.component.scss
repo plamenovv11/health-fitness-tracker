@@ -1,62 +1,71 @@
-/* Main container for sidenav and content */
 .sidenav-container {
-    height: 100vh; /* Ensure full viewport height */
+    height: 100vh;
     display: flex;
     flex-direction: row;
-    overflow: hidden; /* Prevent unnecessary scrollbars */
-
+    overflow: hidden;
 }
 
-/* Sidenav styles */
+
 .sidenav {
-    width: 140px;
-    background-color: #1976d2; /* Blue color */
+    width: 120px;
+    background-color: #1976d2;
     border-radius: 10px 0 0 10px;
-    padding-top: 20px;
+    padding-top: 5px;
     padding-left: 10px;
-    overflow: hidden; /* Prevent scrollbars inside the sidebar */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* This will push the logout to the bottom */
+    height: 100vh;
+    /* Ensure full height */
 }
 
-/* Remove default padding from the nav list */
-.mat-nav-list {
-    padding: 0;
+
+.nav-list-override {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: hidden;
 }
 
-/* Nav item styles */
+
 .nav-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    color: white; /* Text color changed to white */
-    font-size: 12px; /* Adjusted font size */
+    color: white;
+    font-size: 12px;
+    margin-bottom: 10px;
+    /* Add space between the items */
 }
 
-/* Sidebar label styles */
+.nav-item.logout {
+    margin-top: auto;
+}
+
 .sidebar-label {
-    font-size: 12px; /* Adjusted font size */
-    margin-top: 1px; /* Adjust spacing */
+    font-size: 12px;
+    margin-top: 1px;
 }
 
-/* Increased icon size */
 .nav-icon {
-    font-size: 40px; /* Larger icon size */
-    color: white; /* White icon */
+    font-size: 40px;
+    color: white;
 }
 
-/* Sidenav styles (for material sidenav) */
 .mat-sidenav {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    margin: 0px;
+    height: 100vh;
+    margin: 0;
     overflow: hidden;
 }
 
-/* Mat-list item styles */
 .mat-list-item {
     font-size: 12px;
     border-radius: 5px;
@@ -66,51 +75,44 @@
     align-items: center;
 }
 
-/* Mat-icon styles */
 .mat-list-item mat-icon {
-    color: white; /* White icons */
+    color: white;
     margin-right: 10px;
 }
 
-/* Hover effect on nav items */
 .mat-list-item:hover {
-    background-color: #1976d2; /* Blue background on hover */
+    background-color: #1976d2;
     color: white;
 }
 
 .mat-list-item:hover mat-icon {
-    color: white; /* Keep icon white on hover */
-}
-
-/* Active link styles */
-.active-link {
-    font-weight: bold;
-    background-color: #1976d2; /* Active link background color */
     color: white;
 }
 
-/* Main content styles */
+.active-link {
+    font-weight: bold;
+    background-color: #1976d2;
+    color: white;
+}
+
 .main {
     flex-grow: 1;
     padding: 10px;
     background-color: #f1f1f1;
-    margin-left: 125px; /* Light background for main content */
-    overflow: hidden; 
-    height: 100%;/* Prevent scrollbars in the main content */
+    margin-left: 140px;
+    /* Ensure the main content does not overlap with the sidebar */
+    overflow: hidden;
+    height: 100%;
 }
 
-/* Override any inline margin-left applied by Material */
 .mat-sidenav-content {
-    margin-left: 0 !important; /* Remove any automatic margin applied */
-    overflow: hidden; 
-
+    margin-left: 0 !important;
+    overflow: hidden;
 }
 
-/* Optional: Add responsive behavior for smaller screens */
 @media (max-width: 768px) {
     .sidenav {
         width: 200px;
-        overflow: hidden; 
-
+        overflow: hidden;
     }
 }

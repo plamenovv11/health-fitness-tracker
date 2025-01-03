@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'health-fitness-tracker';
+  headerTitle = 'Dashboard';
+
+  updateHeader(title: string) {
+    this.headerTitle = title;
+  }
 }
